@@ -7,9 +7,7 @@ import java.net.*;
 public class Server {
     ServerSocket server = null;
     Socket client = null;
-    String stringaRicevuta = null;
-    String stringModifica = null;
-    BufferedReader inDalClient;
+    // BufferedReader inDalClient;
     ObjectOutputStream outVersoClient;
     File fileDaInviare;
     FileInputStream reader; //istanza per leggere un file binario
@@ -25,7 +23,7 @@ public class Server {
             
             
             outVersoClient = new ObjectOutputStream(client.getOutputStream());
-            reader = new FileInputStream("images.jpg");
+            reader = new FileInputStream("images/images2.jpg");
     server.close();
         }catch(Exception e){
             System.out.println(e.getMessage());
@@ -36,6 +34,9 @@ public class Server {
     }
 
     public void comunica(){
+
+
+
         byte[] buffer = new byte[1024];
         int lenghRead;
        
